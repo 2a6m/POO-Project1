@@ -1,0 +1,6 @@
+C:\Users\maxime\Documents\ECAM\17-18\Q1\Progra Objet\Project\POO-Project1\POO-Project1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\maxime\Documents\ECAM\17-18\Q1\Progra Objet\Project\POO-Project1\POO-Project1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\maxime\Documents\ECAM\17-18\Q1\Progra Objet\Project\POO-Project1\POO-Project1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\maxime\Documents\ECAM\17-18\Q1\Progra Objet\Project\POO-Project1\POO-Project1\ConsoleApp1\obj\Debug\Entreprise.csproj.CoreCompileInputs.cache
+C:\Users\maxime\Documents\ECAM\17-18\Q1\Progra Objet\Project\POO-Project1\POO-Project1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\maxime\Documents\ECAM\17-18\Q1\Progra Objet\Project\POO-Project1\POO-Project1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
