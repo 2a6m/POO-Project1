@@ -8,26 +8,58 @@ namespace ConsoleApp1
 {
     class Manager : Person
     {
-        private List<Consultant> ConsultantList;
+        private Dictionary<String, Consultant> Consultantdict;
+        private Dictionary<String, List<Mission>> Consultantagenda;
 
-        public Manager(String Firstname, String Lastname, int Salary) : base(Firstname, Lastname, Salary)
+        public Manager(String firstname, String lastname, int personnalaccount) : base(firstname, lastname, personnalaccount)
         {
-            this.ConsultantList = new List<Consultant>();
+            this.Consultantdict = new Dictionary<String, Consultant>();
         }
 
         // Method
 
-        //Add a consultant under the manager
-        private void AddConsultant(Consultant Consultant)
+        public void AddConsultant(Consultant consultant)
         {
-            this.ConsultantList.Add(Consultant);
+            //Assert that consultant is not already contained in Consultantdict
+            //BEWARE: Currently Shallow copy of consultant object=> can create problems!!!
+            this.Consultantdict.Add(consultant.GetFirstname() + consultant.GetLastname(), consultant);
         }
 
-        //See how many Consultant are under the manager (getter)
-        private int NumberConsultant
+        public void RemoveConsultant(String id)
         {
-            get { return this.ConsultantList.Count; }
+            //assert that id exist before removing
+            if (this.Consultantdict.ContainsKey(id))
+            {
+                this.Consultantdict.Remove(id);
+            }
+
         }
 
+        public void LoadConsultantdict(Dictionary<String, Consultant> consultantdict)
+        {
+            this.Consultantdict = consultantdict;
+        }
+
+        public void LoadConsultantagenda(Dictionary<String, List<Mission>> consultantagenda)
+        {
+            this.Consultantagenda = consultantagenda;
+        }
+
+        private int NumberConsultant()
+        {
+            //See how many Consultant are under the manager (getter)
+            return this.Consultantdict.Count;
+        }
+
+        public override void GetPaid()
+        {
+            this.SetPersonnalaccount(this.GetPersonnalaccount() + 
+                60000 + 500 * this.NumberConsultant());
+        }
+
+        public void GenerateRapport()
+        {
+            
+        }
     }
 }

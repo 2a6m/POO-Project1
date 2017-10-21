@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         private List<Mission> Missionagenda;
 
-        public Consultant(String Firstname, String Lastname, int Salary) : base(Firstname, Lastname, Salary)
+        public Consultant(String firstname, String lastname, int personnalaccount) : base(firstname, lastname, personnalaccount)
         {
             this.Missionagenda = new List<Mission>();
         }
@@ -40,6 +40,14 @@ namespace ConsoleApp1
 
         private void work()
         {
+        }
+
+        public override void GetPaid()
+        {
+            //ToDo: Handle bonus bounty and manager-salary bonus
+            this.SetPersonnalaccount(this.GetPersonnalaccount() +
+                35000 + 250);
+
         }
 
     }

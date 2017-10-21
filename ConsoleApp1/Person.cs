@@ -10,21 +10,45 @@ namespace ConsoleApp1
     {
         private readonly String Firstname;
         private readonly String Lastname;
-        private int Salary;
         private int Personnalaccount;
 
-        public Person(String Firstname, String Lastname, int Salary)
+        public Person(String firstname, String lastname, int personnalaccount)
         {
-            this.Firstname = Firstname;
-            this.Lastname = Lastname;
-            this.Salary = Salary;
-            this.Personnalaccount = 0;
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+            this.Personnalaccount = personnalaccount;
         }
 
-        void getPaid()
-        {
 
+        //getter - setter
+
+
+        public String GetFirstname()
+        {
+            return this.Firstname;
         }
+
+        public String GetLastname()
+        {
+            return this.Lastname;
+        }
+
+        public int GetPersonnalaccount()
+        {
+            return this.Personnalaccount;
+        }
+
+        public void SetPersonnalaccount(int amount)
+        {
+            this.Personnalaccount = amount;
+        }
+        //methods
+
+        public virtual void GetPaid()
+        {
+        }
+
+
         
 
 
